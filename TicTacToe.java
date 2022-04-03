@@ -22,7 +22,7 @@ public class TicTacToe implements ActionListener{
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// frame.setSize(800,800);
-        frame.setTitle("Tic Tac Toe");
+        	frame.setTitle("Tic Tac Toe");
 		frame.getContentPane().setBackground(new Color(50,50,50));
 		frame.setLayout(new BorderLayout());
 		frame.setBounds(0, 0, 1366, 768);
@@ -58,8 +58,8 @@ public class TicTacToe implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
-		for(int i=0;i<9;i++) {
+		int i = 0;
+		for( ;i<9;i++) {
 			if(e.getSource()==buttons[i]) {
 				if(player1_turn) {
 					if(buttons[i].getText()=="") {
@@ -85,6 +85,8 @@ public class TicTacToe implements ActionListener{
 	
 	public void firstTurn() {
 		
+		// code For delay 
+
 		// try {
 		// 	Thread.sleep(2000);
 		// } catch (InterruptedException e) {
@@ -255,7 +257,7 @@ public class TicTacToe implements ActionListener{
 		    System.exit(0);  
 		} 
 		else{
-			frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+			frame.setVisible(false);
 			new TicTacToe();
 		}
 	}
@@ -276,9 +278,8 @@ public class TicTacToe implements ActionListener{
 		    System.exit(0);
 		} 
 		else{
-			frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+			frame.setVisible(false);
 			new TicTacToe();
 		}
-
 	}
 }
