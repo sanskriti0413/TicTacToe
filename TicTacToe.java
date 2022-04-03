@@ -251,13 +251,13 @@ public class TicTacToe implements ActionListener{
 
 		int option = JOptionPane.showConfirmDialog(null,"Do you want to play again?","An Inane Question", JOptionPane.YES_NO_OPTION); 
 
-        if(option == JOptionPane.NO_OPTION){  
-            System.exit(0);  
-        } 
-        else{
-        	frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        	new TicTacToe();
-        }
+		if(option == JOptionPane.NO_OPTION){  
+		    System.exit(0);  
+		} 
+		else{
+			frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+			new TicTacToe();
+		}
 	}
 
 	public void oWins(int a,int b,int c) {
@@ -272,13 +272,13 @@ public class TicTacToe implements ActionListener{
 
 		int option = JOptionPane.showConfirmDialog(null,"Do you want to play again?", "An Inane Question", JOptionPane.YES_NO_OPTION); 
 
-        if(option == JOptionPane.NO_OPTION){  
-            System.exit(0);
-        } 
-      	else{
-        	frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        	new TicTacToe();
-        }
+		if(option == JOptionPane.NO_OPTION){  
+		    System.exit(0);
+		} 
+		else{
+			frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+			new TicTacToe();
+		}
 
 	}
 }
